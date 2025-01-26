@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>271</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(174, 220, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_mp">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>30</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Forte&quot;;
+background-color: rgb(130, 0, 2);
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;</string>
+    </property>
+    <property name="text">
+     <string>Metros a Pies</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_pm">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>120</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Forte&quot;;
+background-color: rgb(130, 0, 2);
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;</string>
+    </property>
+    <property name="text">
+     <string>Pies a Metros</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Lbl_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>50</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Metros: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Lbl_2">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>80</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>0 Pies</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_1">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>100</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>799</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

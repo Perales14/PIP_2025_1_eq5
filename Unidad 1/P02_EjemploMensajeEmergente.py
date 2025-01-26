@@ -16,7 +16,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def msj(self,txt):
         m = QtWidgets.QMessageBox()
         m.setText(txt)
-
         m.exec_()
 
     #Area de los Slots

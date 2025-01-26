@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(127, 200, 182)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="txt_X1">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>60</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>P1:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Lbl_pm">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>380</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-align: top; 
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Punto Medio: </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Calcular">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>300</y>
+      <width>261</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(141, 141, 141);
+font: 20pt &quot;Forte&quot;;
+color:rgb(255, 255, 255);
+border-radius:35px;
+border:6px solid #B0BEC5;
+</string>
+    </property>
+    <property name="text">
+     <string>Calcular</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>X1:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>70</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>,</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_Y1">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>60</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>0</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Y1:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>230</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>,</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>160</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Y2:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>230</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>P2:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_X2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>220</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>160</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>X2:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_Y2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>220</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

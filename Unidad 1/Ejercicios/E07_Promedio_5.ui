@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(255, 166, 23)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_AgregarValor">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>100</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(141, 141, 141);
+font: 20pt &quot;Forte&quot;;
+color:rgb(255, 255, 255);
+border-radius:35px;
+border:6px solid #B0BEC5;
+</string>
+    </property>
+    <property name="text">
+     <string>Siguiente valor</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_Valor">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Valor:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Lbl_promedio">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>330</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-align: center; 
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+qproperty-alignment: 'AlignCenter';</string>
+    </property>
+    <property name="text">
+     <string>Promedio:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Calcular">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>240</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(141, 141, 141);
+font: 20pt &quot;Forte&quot;;
+color:rgb(255, 255, 255);
+border-radius:35px;
+border:6px solid #B0BEC5;
+</string>
+    </property>
+    <property name="text">
+     <string>Calcular</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
