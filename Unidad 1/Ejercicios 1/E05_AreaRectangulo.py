@@ -1,12 +1,15 @@
 import sys
 from PyQt5 import uic, QtWidgets
-qtCreatorFile = "E05_AreaRectangulo.ui"
+archivo = "E05_AreaRectangulo.ui"
+qtCreatorFile = archivo
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
+
         Ui_MainWindow.__init__(self)
+        # Ui_MainWindow.
         self.setupUi(self)
         #para agregar la funcionalidad de calcular al boton de calcular
         self.btn_Calcular.clicked.connect(self.calcular)

@@ -140,6 +140,26 @@ color:rgb(0, 0, 0)
      <string>IVA(16%):</string>
     </property>
    </widget>
+   <widget class="QLabel" name="Lbl_IMC_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>30</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Ejercicio 06 IVA</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

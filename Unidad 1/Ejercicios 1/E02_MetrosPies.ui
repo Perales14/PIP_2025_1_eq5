@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>799</width>
-    <height>271</height>
+    <height>362</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="btn_mp">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>30</y>
+      <x>500</x>
+      <y>130</y>
       <width>231</width>
       <height>61</height>
      </rect>
@@ -49,8 +49,8 @@ border:6px solid #B0BEC5;</string>
    <widget class="QPushButton" name="btn_pm">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>120</y>
+      <x>500</x>
+      <y>220</y>
       <width>231</width>
       <height>61</height>
      </rect>
@@ -78,8 +78,8 @@ border:6px solid #B0BEC5;</string>
    <widget class="QLabel" name="Lbl_1">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>50</y>
+      <x>60</x>
+      <y>150</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -99,8 +99,8 @@ font-style: italic;</string>
    <widget class="QLabel" name="Lbl_2">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>80</y>
+      <x>260</x>
+      <y>180</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -120,8 +120,8 @@ font-style: italic;</string>
    <widget class="QLineEdit" name="txt_1">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>100</y>
+      <x>50</x>
+      <y>200</y>
       <width>151</width>
       <height>71</height>
      </rect>
@@ -157,6 +157,26 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;
     </property>
     <property name="clearButtonEnabled">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Lbl_IMC_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Ejercicio 02 Metros A Pies</string>
     </property>
    </widget>
   </widget>

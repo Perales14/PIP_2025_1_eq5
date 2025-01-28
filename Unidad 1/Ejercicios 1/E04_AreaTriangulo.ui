@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="btn_Calcular">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>330</y>
+      <x>440</x>
+      <y>400</y>
       <width>251</width>
       <height>71</height>
      </rect>
@@ -41,8 +41,8 @@ border:6px solid #B0BEC5;
    <widget class="QLineEdit" name="txt_Base">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>150</y>
+      <x>140</x>
+      <y>220</y>
       <width>151</width>
       <height>71</height>
      </rect>
@@ -83,8 +83,8 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>80</y>
+      <x>120</x>
+      <y>150</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -103,8 +103,8 @@ color:rgb(0, 0, 0)
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>260</y>
+      <x>120</x>
+      <y>330</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -123,8 +123,8 @@ color:rgb(0, 0, 0)
    <widget class="QLineEdit" name="txt_Altura">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>330</y>
+      <x>140</x>
+      <y>400</y>
       <width>151</width>
       <height>71</height>
      </rect>
@@ -165,8 +165,8 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QLabel" name="Lbl_Area">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>180</y>
+      <x>450</x>
+      <y>250</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -180,6 +180,26 @@ color:rgb(0, 0, 0)
     </property>
     <property name="text">
      <string>Area:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Lbl_IMC_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>481</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>Ejercicio 04 Area de un Triangulo</string>
     </property>
    </widget>
   </widget>
