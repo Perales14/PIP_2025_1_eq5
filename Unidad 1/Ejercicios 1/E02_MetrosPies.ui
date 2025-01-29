@@ -79,7 +79,7 @@ border:6px solid #B0BEC5;</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>150</y>
+      <y>110</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -121,7 +121,7 @@ font-style: italic;</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>200</y>
+      <y>160</y>
       <width>151</width>
       <height>71</height>
      </rect>
