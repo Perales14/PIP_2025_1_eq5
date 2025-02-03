@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="Logos">
-    <file>logo.png</file>
-  </qresource>
-  <qresource prefix="Ejercicios">
-    <file>Ejercicios.png</file>
-  </qresource>
-</RCC>

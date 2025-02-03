@@ -32,14 +32,14 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             velocidad = "Velocidad: "+str(velocidad)+" m/h"
         self.Lbl_Velocidad.setText(velocidad)
 
-    def changeStyleSheet(self, label):
-        label.setStyleSheet("""
-           QLabel {
-                text-decoration: underline;
-                font: 20pt "Forte";
-                color:rgb(0, 0, 0)
-           }
-           """)
+    # def changeStyleSheet(self, label):
+    #     label.setStyleSheet("""
+    #        QLabel {
+    #             text-decoration: underline;
+    #             font: 20pt "Forte";
+    #             color:rgb(0, 0, 0)
+    #        }
+    #        """)
     def msj(self,txt):
         m = QtWidgets.QMessageBox()
         m.setText(txt)
