@@ -10,6 +10,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.valor = None
         self.setupUi(self)
+        self.intentos = 0
+        self.txt_Valor.setEnabled(False)
         self.btn_Inicio.clicked.connect(self.Inicio)
         self.btn_Enviar.clicked.connect(self.Enviar)
         self.txt_Valor.textChanged.connect(self.CheckLetter)
@@ -18,6 +20,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def Inicio(self):
         if self.valor is None:
             self.valor = random.randint(1,100)
+            self.txt_Valor.setEnabled(True)
+            self.txt_Valor.setText("")
             self.lbl_Rango.setText(f"El numero esta entre {self.valor//10*10} y {self.valor//10*10+10}")
             # self.btn_Inicio.setText("Reiniciar")
 
@@ -42,13 +46,22 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             return
 
         #3 casos, valordado es mayor, es menor y es igual
+
+        if self.valor is None:
+            self.msj("Reinicia el juego para volver a intentar")
+            return
+
+        self.intentos += 1
+
         if valor > self.valor:
             self.msj("El valor es menor")
         elif valor < self.valor:
             self.msj("El valor es mayor")
         else:
-            self.msj("Felicidades, has adivinado el numero")
+            mensaje = "Felicidades, has adivinado el numero\n en " + str(self.intentos) + " intentos"
+            self.msj(mensaje)
             self.valor = None
+            self.txt_Valor.setEnabled(False)
 
 
 
