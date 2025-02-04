@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import uic, QtWidgets, QtCore
-qtCreatorFile = "U2_E01_Grados_Centígrados_a_Fahrenheit.ui"
+qtCreatorFile = "U2_E04_Metros_a_Kilometros.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -8,35 +8,30 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
+        self.btn_Mk.clicked.connect(self.calcularKilometros)
+        self.btn_Km.clicked.connect(self.calcularMetros)
         self.txt_Valor.textChanged.connect(self.CheckLetter)
-        self.btn_Fc.clicked.connect(self.calcularCentigrados)
-        self.btn_Cf.clicked.connect(self.calcularFahrenheit)
 
-    def calcularFahrenheit(self):
+
+    def calcularKilometros(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
-        try:
-            centigrados = float(valor)
-            fahrenheit = centigrados * 9/5 + 32
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(fahrenheit, 2)} Fahrenheit")
-        self.lbl_Temperatura.setText("Centígrados:")
 
-    def calcularCentigrados(self):
+        metros = float(self.txt_Valor.text())
+        kilometros = metros/1000
+
+        self.lbl_ValorLongitud.setText(f"{round(kilometros, 3)} Kilómetros")
+        self.lbl_Longitud.setText("Metros:")
+
+    def calcularMetros(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
-        try:
-            fahrenheit = float(valor)
-            centigrados = (fahrenheit - 32)/1.8
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(centigrados, 2)} Centígrados")
-        self.lbl_Temperatura.setText("Fahrenheit:")
+
+        kilometros = float(self.txt_Valor.text())
+        metros = kilometros * 1000
+
+        self.lbl_ValorLongitud.setText(f"{round(metros, 3)} Metros")
+        self.lbl_Longitud.setText("Kilómetros:")
 
     def CheckValue(self):
         valor = self.txt_Valor.text()

@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import uic, QtWidgets, QtCore
-qtCreatorFile = "U2_E01_Grados_Centígrados_a_Fahrenheit.ui"
+qtCreatorFile = "U2_E08_Tabla_de_Multiplicar.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -8,42 +8,31 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
+        self.btn_CT.clicked.connect(self.CalcularTabla)
         self.txt_Valor.textChanged.connect(self.CheckLetter)
-        self.btn_Fc.clicked.connect(self.calcularCentigrados)
-        self.btn_Cf.clicked.connect(self.calcularFahrenheit)
 
-    def calcularFahrenheit(self):
+
+    def CalcularTabla(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
         try:
-            centigrados = float(valor)
-            fahrenheit = centigrados * 9/5 + 32
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(fahrenheit, 2)} Fahrenheit")
-        self.lbl_Temperatura.setText("Centígrados:")
+            valor = int(self.txt_Valor.text())
 
-    def calcularCentigrados(self):
-        if self.CheckValue():
-            return
-        valor = self.txt_Valor.text()
-        try:
-            fahrenheit = float(valor)
-            centigrados = (fahrenheit - 32)/1.8
         except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
+            self.msj("Introduce un numero valido. ")
             return
-        self.lbl_ValorTemperatura.setText(f"{round(centigrados, 2)} Centígrados")
-        self.lbl_Temperatura.setText("Fahrenheit:")
+
+        resultado = [f"{valor} x {i} = {valor*i}" for i in   range(1,11)]
+        self.lbl_Tabla.setText("\n".join(resultado))
+
+
+
 
     def CheckValue(self):
-        valor = self.txt_Valor.text()
-        if valor == "":
+        valorA = self.txt_Valor.text()
+        if valorA == "":
             self.msj("Introduce un numero por favor.")
             return True
-
     def CheckLetter(self):
         valor = self.txt_Valor.text()
         try:

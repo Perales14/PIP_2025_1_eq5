@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import uic, QtWidgets, QtCore
-qtCreatorFile = "U2_E01_Grados_Centígrados_a_Fahrenheit.ui"
+qtCreatorFile = "U2_E05_Pesos_a_Dolares.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -8,35 +8,29 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
+        self.btn_Pd.clicked.connect(self.calcularDolares)
+        self.btn_Dp.clicked.connect(self.calcularPesos)
         self.txt_Valor.textChanged.connect(self.CheckLetter)
-        self.btn_Fc.clicked.connect(self.calcularCentigrados)
-        self.btn_Cf.clicked.connect(self.calcularFahrenheit)
 
-    def calcularFahrenheit(self):
+    def calcularDolares(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
-        try:
-            centigrados = float(valor)
-            fahrenheit = centigrados * 9/5 + 32
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(fahrenheit, 2)} Fahrenheit")
-        self.lbl_Temperatura.setText("Centígrados:")
 
-    def calcularCentigrados(self):
+        pesos = float(self.txt_Valor.text())
+        dolares = pesos/20.44
+
+        self.lbl_ValorMonetario.setText(f"{round(dolares, 2)} Dólares(USA$)")
+        self.lbl_Monetario.setText("Peso(MxN):")
+
+    def calcularPesos(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
-        try:
-            fahrenheit = float(valor)
-            centigrados = (fahrenheit - 32)/1.8
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(centigrados, 2)} Centígrados")
-        self.lbl_Temperatura.setText("Fahrenheit:")
+
+        dolares = float(self.txt_Valor.text())
+        pesos = dolares * 20.44
+
+        self.lbl_ValorMonetario.setText(f"{round(pesos, 2)} Pesos(MxN)")
+        self.lbl_Monetario.setText("Dólares(USA$):")
 
     def CheckValue(self):
         valor = self.txt_Valor.text()

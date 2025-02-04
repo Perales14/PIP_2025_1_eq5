@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>784</width>
-    <height>632</height>
+    <height>532</height>
    </rect>
   </property>
   <property name="font">
@@ -26,7 +26,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>10</y>
+      <y>0</y>
       <width>331</width>
       <height>121</height>
      </rect>
@@ -48,7 +48,7 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>10</y>
+      <y>0</y>
       <width>211</width>
       <height>141</height>
      </rect>
@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>470</x>
-      <y>410</y>
+      <y>310</y>
       <width>311</width>
       <height>171</height>
      </rect>
@@ -88,70 +88,12 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_Fc">
+   <widget class="QLabel" name="lbl_Adivina">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>510</y>
-      <width>381</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Forte</family>
-      <pointsize>20</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;Forte&quot;;
-background-color: rgb(130, 0, 2);
-color: rgb(255, 255, 255);
-border-radius:30px;
-border:6px solid #B0BEC5;</string>
-    </property>
-    <property name="text">
-     <string>Fahrenheit a Centígrados</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_Cf">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>420</y>
-      <width>381</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Forte</family>
-      <pointsize>20</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;Forte&quot;;
-background-color: rgb(130, 0, 2);
-color: rgb(255, 255, 255);
-border-radius:30px;
-border:6px solid #B0BEC5;</string>
-    </property>
-    <property name="text">
-     <string>Centígrados a Fahrenheit</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_Temperatura">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>280</y>
-      <width>201</width>
+      <x>60</x>
+      <y>290</y>
+      <width>311</width>
       <height>31</height>
      </rect>
     </property>
@@ -164,16 +106,16 @@ font-weight: bold;
 font-style: italic;</string>
     </property>
     <property name="text">
-     <string>Centígrados: </string>
+     <string>Inserta un Número:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_ValorTemperatura">
+   <widget class="QLabel" name="lbl_Rango">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>320</y>
-      <width>251</width>
-      <height>101</height>
+      <x>50</x>
+      <y>240</y>
+      <width>631</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -184,19 +126,13 @@ font-style: italic;</string>
                    font-style: italic;</string>
     </property>
     <property name="text">
-     <string>0 Fahrenheit</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
+     <string>El Número esta entre:</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txt_Valor">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>130</x>
       <y>330</y>
       <width>151</width>
       <height>71</height>
@@ -238,7 +174,7 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QLabel" name="lbl_titulo">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>90</x>
       <y>180</y>
       <width>671</width>
       <height>31</height>
@@ -253,7 +189,7 @@ font-weight: bold;
 font-style: italic;</string>
     </property>
     <property name="text">
-     <string>Cambio de Grados Centígrados a Fahrenheit</string>
+     <string>Adivina el Número de la Computadora </string>
     </property>
    </widget>
    <widget class="QLabel" name="lbl_Unidad2">
@@ -277,6 +213,66 @@ font-style: italic;</string>
      <string>Unidad 2</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_Inicio">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>230</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 20pt &quot;Forte&quot;;
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;
+background-color: rgb(120, 0, 2);</string>
+    </property>
+    <property name="text">
+     <string>Iniciar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Enviar">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>410</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 20pt &quot;Forte&quot;;
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;
+background-color: rgb(120, 0, 2);</string>
+    </property>
+    <property name="text">
+     <string>Enviar</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -292,6 +288,7 @@ font-style: italic;</string>
  </widget>
  <resources>
   <include location="../../Archivos/Recursos.qrc"/>
+  <include location="../Recursos.qrc"/>
  </resources>
  <connections/>
 </ui>

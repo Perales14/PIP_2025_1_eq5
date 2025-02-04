@@ -25,7 +25,7 @@
    <widget class="QLabel" name="lbl_imagenUat">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>10</x>
       <y>0</y>
       <width>331</width>
       <height>121</height>
@@ -38,7 +38,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Recursos.qrc">:/Logos/Archivos/log_uat_nuevo.png</pixmap>
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/log_uat_nuevo.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -47,8 +47,8 @@
    <widget class="QLabel" name="lbl_imagenFi">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>10</y>
+      <x>570</x>
+      <y>0</y>
       <width>211</width>
       <height>141</height>
      </rect>
@@ -60,7 +60,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Recursos.qrc">:/Logos/Archivos/FIT_logo_vertical.png</pixmap>
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/FIT_logo_vertical.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -69,8 +69,8 @@
    <widget class="QLabel" name="lbl_imagenGatos">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>380</y>
+      <x>470</x>
+      <y>400</y>
       <width>311</width>
       <height>171</height>
      </rect>
@@ -82,7 +82,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Recursos.qrc">:/Logos/Archivos/Gatos.png</pixmap>
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Images/Gatos.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -170,9 +170,9 @@ font-style: italic;</string>
    <widget class="QLabel" name="lbl_ValorMonetario">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>450</x>
       <y>250</y>
-      <width>261</width>
+      <width>321</width>
       <height>31</height>
      </rect>
     </property>
@@ -295,6 +295,7 @@ font-style: italic;</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
+  <include location="../../Archivos/Recursos.qrc"/>
   <include location="../Recursos.qrc"/>
  </resources>
  <connections/>

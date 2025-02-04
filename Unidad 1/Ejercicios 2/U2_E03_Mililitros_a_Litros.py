@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import uic, QtWidgets, QtCore
-qtCreatorFile = "U2_E01_Grados_Centígrados_a_Fahrenheit.ui"
+qtCreatorFile = "U2_E03_Mililitros_a_Litros.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -8,35 +8,29 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
+        self.btn_Ml.clicked.connect(self.calcularLitros)
+        self.btn_Lm.clicked.connect(self.calcularMililitros)
         self.txt_Valor.textChanged.connect(self.CheckLetter)
-        self.btn_Fc.clicked.connect(self.calcularCentigrados)
-        self.btn_Cf.clicked.connect(self.calcularFahrenheit)
 
-    def calcularFahrenheit(self):
+    def calcularLitros(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
-        try:
-            centigrados = float(valor)
-            fahrenheit = centigrados * 9/5 + 32
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(fahrenheit, 2)} Fahrenheit")
-        self.lbl_Temperatura.setText("Centígrados:")
 
-    def calcularCentigrados(self):
+        mililitros = float(self.txt_Valor.text())
+        litros = mililitros/1000
+
+        self.lbl_ValorCapacidad.setText(f"{round(litros, 2)} Litros")
+        self.lbl_Capacidad.setText("Mililitros:")
+
+    def calcularMililitros(self):
         if self.CheckValue():
             return
-        valor = self.txt_Valor.text()
-        try:
-            fahrenheit = float(valor)
-            centigrados = (fahrenheit - 32)/1.8
-        except Exception as e:
-            self.msj("Se ha producido un error en la conversion")
-            return
-        self.lbl_ValorTemperatura.setText(f"{round(centigrados, 2)} Centígrados")
-        self.lbl_Temperatura.setText("Fahrenheit:")
+
+        litros = float(self.txt_Valor.text())
+        mililitros = litros*1000
+
+        self.lbl_ValorCapacidad.setText(f"{round(mililitros, 2)} Mililitros")
+        self.lbl_Capacidad.setText("Litros:")
 
     def CheckValue(self):
         valor = self.txt_Valor.text()
