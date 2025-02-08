@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import uic, QtWidgets
-qtCreatorFile = "POO_EjemploBoton.ui" #Cambiar el nombre a P00 osea el numero 0, no el O XD
+qtCreatorFile = "P01_EjemploBoton.ui" #Cambiar el nombre a P00 osea el numero 0, no el O XD
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):

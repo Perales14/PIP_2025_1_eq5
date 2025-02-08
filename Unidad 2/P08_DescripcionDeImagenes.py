@@ -18,6 +18,11 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.selector_Imagen.setSingleStep(1)
         self.selector_Imagen.setValue(1)
         self.selector_Imagen.valueChanged.connect(self.cambiarValor)
+        # self.diccionarioDatos ={
+        #     0: (":/Images/Gatos.png",["Gato", "4 meses", "Raton"]),
+        #     0: (":/Logos/FIT_logo_vertical.png", ["Castor","65 años", "e"]),
+        #     0: (":/Logos/log_uat_nuevo.png", []),
+        # }
 
         # self.txt_Nombre.setText("1")
 # Area de los Signals

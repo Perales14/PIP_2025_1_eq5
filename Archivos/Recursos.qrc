@@ -4,6 +4,7 @@
     <file>log_uat_nuevo.png</file>
   </qresource>
   <qresource prefix="Images">
+    <file>YO.jpg</file>
     <file>Gatos.png</file>
   </qresource>
 </RCC>
