@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic, QtWidgets, QtCore
 qtCreatorFile = "E06_IVA.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
@@ -10,6 +10,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         #para agregar la funcionalidad de calcular al boton de calcular
         self.btn_Calcular.clicked.connect(self.calcular)
+        self.txt_Cantidad.textChanged.connect(self.CheckLetterC)
 
     def calcular(self):
         try:
@@ -49,6 +50,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             """)
         m.exec_()
 
+    def CheckLetterC(self):
+        valor = self.txt_Cantidad.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Cantidad.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Cantidad.mapToGlobal(self.txt_Cantidad.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Cantidad.setFocus()
+            valor = valor[:-1]
+            self.txt_Cantidad.setText(valor)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
