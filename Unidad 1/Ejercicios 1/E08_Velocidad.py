@@ -19,7 +19,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             tiempo = float(self.txt_tiempo.text())
             print(tiempo)
         except:
-            self.msj("Por favor, rellene ambos campos con distanciaes numericos")
+            self.msj("Por favor, rellene ambos campos con distancias numericos")
             return
         #si es mayor a 1km, lo mejor sera darla en Km/h
         if distancia >= 1000:
