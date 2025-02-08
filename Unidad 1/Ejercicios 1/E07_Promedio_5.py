@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic, QtWidgets, QtCore
 qtCreatorFile = "E07_Promedio_5.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 valores = []
@@ -10,7 +10,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.btn_Calcular.clicked.connect(self.calcular)
         self.btn_AgregarValor.clicked.connect(self.agregarValor)
-
+        self.txt_Valor.textChanged.connect(self.CheckLetterV)
 
     def agregarValor(self):
         if len(valores) == 5:
@@ -66,7 +66,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 }
             """)
         m.exec_()
+    def CheckLetterV(self):
+        valor = self.txt_Valor.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Valor.setText(valor)
 
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Valor.mapToGlobal(self.txt_Valor.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Valor.setFocus()
+            valor = valor[:-1]
+            self.txt_Valor.setText(valor)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
