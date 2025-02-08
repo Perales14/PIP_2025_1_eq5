@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic, QtWidgets, QtCore
 qtCreatorFile = "E01_IMC.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
@@ -10,6 +10,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         #para agregar la funcionalidad de calcular al boton de calcular
         self.btn_Calcular.clicked.connect(self.calcular)
+        self.txt_Peso.textChanged.connect(self.CheckLetter)
+        self.txt_Altura.textChanged.connect(self.CheckLetterA)
 
     def calcular(self):
         try:
@@ -32,6 +34,35 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 color:rgb(0, 0, 0)
            }
            """)
+
+    def CheckLetter(self):
+        valor = self.txt_Peso.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Peso.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Peso.mapToGlobal(self.txt_Peso.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Peso.setFocus()
+            valor = valor[:-1]
+            self.txt_Peso.setText(valor)
+
+    def CheckLetterA(self):
+        valor = self.txt_Altura.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Altura.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Altura.mapToGlobal(self.txt_Altura.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Altura.setFocus()
+            valor = valor[:-1]
+            self.txt_Altura.setText(valor)
+
     def msj(self,txt):
         # muestra un mensaje en un MessageBox, la ventana asi chica de mensajes de alerta
         m = QtWidgets.QMessageBox()

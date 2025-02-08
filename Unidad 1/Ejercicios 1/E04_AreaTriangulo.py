@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic, QtWidgets, QtCore
 qtCreatorFile = "E04_AreaTriangulo.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
@@ -10,6 +10,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         #para agregar la funcionalidad de calcular al boton de calcular
         self.btn_Calcular.clicked.connect(self.calcular)
+        self.txt_Base.textChanged.connect(self.CheckLetter)
+        self.txt_Altura.textChanged.connect(self.CheckLetterA)
 
     def calcular(self):
         try:
@@ -45,6 +47,34 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 }
             """)
         m.exec_()
+
+    def CheckLetter(self):
+        valor = self.txt_Base.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Base.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Base.mapToGlobal(self.txt_Base.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Base.setFocus()
+            valor = valor[:-1]
+            self.txt_Base.setText(valor)
+
+    def CheckLetterA(self):
+        valor = self.txt_Altura.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Altura.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Altura.mapToGlobal(self.txt_Altura.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Altura.setFocus()
+            valor = valor[:-1]
+            self.txt_Altura.setText(valor)
 
 
 if __name__ == "__main__":

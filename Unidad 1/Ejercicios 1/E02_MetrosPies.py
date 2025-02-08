@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic, QtWidgets, QtCore
 qtCreatorFile = "E02_MetrosPies.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 metros = True
@@ -18,6 +18,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         # Acciones del boton pm (pies a metros)
         self.btn_pm.clicked.connect(self.pies_metros)
         self.btn_pm.clicked.connect(self.convertir)
+        self.txt_1.textChanged.connect(self.CheckLetter)
 
     def convertir(self):
         #valor 1 es el valor que se ingresa en el txt_1, que es el valor que se va a convertir a otra unidad
@@ -82,6 +83,20 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.changeStyleSheet(self.Lbl_1)
         self.Lbl_1.setText("Pies: ")
         self.changeStyleSheet(self.Lbl_2)
+
+    def CheckLetter(self):
+        valor = self.txt_1.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_1.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_1.mapToGlobal(self.txt_1.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_1.setFocus()
+            valor = valor[:-1]
+            self.txt_1.setText(valor)
 
     def msj(self,txt):
         m = QtWidgets.QMessageBox()

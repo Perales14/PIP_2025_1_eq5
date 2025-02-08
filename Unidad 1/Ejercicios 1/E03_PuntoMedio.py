@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import uic, QtWidgets
+from PyQt5 import uic, QtWidgets, QtCore
 qtCreatorFile = "E03_PuntoMedio_2.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
@@ -10,6 +10,10 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         #para agregar la funcionalidad de calcular al boton de calcular
         self.btn_Calcular.clicked.connect(self.calcular)
+        self.txt_X1.textChanged.connect(self.CheckLetterx1)
+        self.txt_X2.textChanged.connect(self.CheckLetterx2)
+        self.txt_Y1.textChanged.connect(self.CheckLettery1)
+        self.txt_Y2.textChanged.connect(self.CheckLettery2)
 
     def calcular(self):
         try:
@@ -38,6 +42,63 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 text-align: top;
            }
            """)
+
+    def CheckLetterx1(self):
+        valor = self.txt_X1.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_X1.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_X1.mapToGlobal(self.txt_X1.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_X1.setFocus()
+            valor = valor[:-1]
+            self.txt_X1.setText(valor)
+
+    def CheckLetterx2(self):
+        valor = self.txt_X2.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_X2.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_X2.mapToGlobal(self.txt_X2.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_X2.setFocus()
+            valor = valor[:-1]
+            self.txt_X2.setText(valor)
+
+    def CheckLettery1(self):
+        valor = self.txt_Y1.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Y1.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Y1.mapToGlobal(self.txt_Y1.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Y1.setFocus()
+            valor = valor[:-1]
+            self.txt_Y1.setText(valor)
+
+    def CheckLettery2(self):
+        valor = self.txt_Y2.text()
+        try:
+            float(valor)
+            valor = "".join(valor.split())
+            self.txt_Y2.setText(valor)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Y2.mapToGlobal(self.txt_Y2.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Y2.setFocus()
+            valor = valor[:-1]
+            self.txt_Y2.setText(valor)
+
     def msj(self,txt):
         # muestra un mensaje en un MessageBox, la ventana asi chica de mensajes de alerta
         m = QtWidgets.QMessageBox()
@@ -51,6 +112,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                 }
             """)
         m.exec_()
+
 
 
 if __name__ == "__main__":
