@@ -10,6 +10,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.btn_Agregar.clicked.connect(self.Agregar)
         self.btn_Guardar.clicked.connect(self.Guardar)
         self.btn_Cargar.clicked.connect(self.Cargar)
+        self.txt_Calificacion.textChanged.connect(self.CheckLetterC)
         self.calificaciones = []
 
     def Cargar(self):
@@ -56,6 +57,20 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         m.setText(txt)
 
         m.exec_()
+
+    def CheckLetterC(self):
+        calificacion = self.txt_Calificacion.text()
+        try:
+            float(calificacion)
+            calificacion = "".join(calificacion.split())
+            self.txt_Calificacion.setText(calificacion)
+
+        except:
+            QtWidgets.QToolTip.showText(self.txt_Calificacion.mapToGlobal(self.txt_Calificacion.rect().bottomLeft()),
+                                        "Solo se permiten números", None, QtCore.QRect(), 5000)
+            self.txt_Calificacion.setFocus()
+            calificacion = calificacion[:-1]
+            self.txt_Calificacion.setText(calificacion)
 
     #Area de los Slots
 
