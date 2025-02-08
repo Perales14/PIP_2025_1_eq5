@@ -169,16 +169,20 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                     archivo = open(nombre[0]+".txt", "w")
                     archivo.write(", ".join([str(i) for i in self.lista]))
                     archivo.close()
+                    self.msj("Archivo guardado con éxito")
                 return
 
             else:
                 archivo = open("datos.txt", "w")
                 archivo.write(", ".join([str(i) for i in self.lista]))
                 archivo.close()
+                self.msj("Archivo guardado con éxito")
+
         except:
             archivo = open("datos.txt","w")
             archivo.write(", ".join([str(i) for i in self.lista]))
             archivo.close()
+            self.msj("Archivo guardado con éxito")
 
 
     def calcular(self):
