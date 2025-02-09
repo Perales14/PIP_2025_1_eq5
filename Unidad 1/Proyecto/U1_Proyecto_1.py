@@ -4,22 +4,19 @@ from tkinter.constants import ROUND
 from PyQt5 import uic, QtWidgets, QtCore
 from matplotlib.rcsetup import validate_int_or_None
 
-qtCreatorFile = "U1_Proyecto_1.ui" #Cambiar el nombre a P00 osea el numero 0, no el O XD
+qtCreatorFile = "U1_Proyecto_V1.ui" #Cambiar el nombre a P00 osea el numero 0, no el O XD
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
-        #Area de los Signals
-        # bontes (btn_Cargar, btn_Eliminar, btn_Guardar,btn_Modificar)
         self.txt_Valores.setEnabled(False)
         self.btn_Cargar.clicked.connect(self.cargar)
         self.btn_Eliminar.clicked.connect(self.eliminar)
         self.btn_Guardar.clicked.connect(self.guardar)
         self.btn_Modificar.clicked.connect(self.modificar)
         self.btn_Save.clicked.connect(self.save)
-        # self.save.clicked.connect(self.save)
 
         self.lista = []
         self.txt_Valor.textChanged.connect(self.CheckLetter)
@@ -118,7 +115,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.txt_Modifica.setText("")
             return
         self.msj("A continuación, ingrese el nuevo valor")
-        self.entrada = QtWidgets.QInputDialog()#.changeEvent(QtCore.QEvent.Type(1))
+        self.entrada = QtWidgets.QInputDialog()
         self.entrada.setStyleSheet("""
         QLineEdit {
             font: 20pt "Forte";
@@ -127,10 +124,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             border: 10px solid rgb(33, 150, 243);   
         }
         """)
-        # self.entrada.textValueChanged.connect(self.chechprint)
-        valor = self.entrada.getText(self.entrada, "Nuevo valor", "Ingrese el nuevo valor")#, QtWidgets.QLineEdit.NoEcho, "Aaa")
-        # valor = [1,1]
-
+        valor = self.entrada.getText(self.entrada, "Nuevo valor", "Ingrese el nuevo valor")
         if valor[1]:
             try:
                 valor = float(valor[0])
@@ -145,39 +139,35 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.lista.pop(posicion)
             self.addrefresh(round(valor,2))
             self.clearTxt(self.txt_Modifica)
+        else:
+            self.msj("No se ingresó un valor")
+            self.clearTxt(self.txt_Modifica)
+            return
         self.calcular()
 
     def save(self):
-        #verificar si el archivo ya existe, en caso de existir preguntar si se desea sobreescribir
-        #si se desea sobreescribir, guardar los datos en el archivo
-        #si no, no hacer nada
+        #verifica si existe el archivo, si existe pregunta sobreescribir, o guardar con otro nombre
         if len(self.lista) == 0:
             self.msj("No hay valores en la lista")
             return
-
         try:
             archivo = open("datos.txt")
             archivo.close()
             #si no rompe, el archivo existe, por lo que se le pregunta si sobre escribir o que de otro nombre para el archivo
-            respuesta = QtWidgets.QMessageBox.question(None, "Sobreescribir", "¿Desea sobreescribir el archivo?", QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
-
+            respuesta = QtWidgets.QMessageBox.question(None, "Sobreescribir", "¿Desea sobreescribir el archivo?", QtWidgets.QMessageBox.Cancel | QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.Cancel)
             if respuesta == QtWidgets.QMessageBox.No:
                 nombre = QtWidgets.QInputDialog.getText(None, "Nombre del archivo", "Ingrese el nombre del archivo")
-                if nombre[1]:
-                    #el "nombre[1]" se refiere a la seleccion que hizo, si es verdad pues dio "ok" o siguiente, lo que haya, si es falso, pues presiono
-                    # que no, o cerro, y esa respesta no nos sirve, por eso no hay else
+                if nombre[1]: #nombre[1] es un booleano, si es verdadero, se guardo el nombre, si es falso, no se guardo o cerro la ventana
                     archivo = open(nombre[0]+".txt", "w")
                     archivo.write(", ".join([str(i) for i in self.lista]))
                     archivo.close()
                     self.msj("Archivo guardado con éxito")
                 return
-
-            else:
+            elif respuesta == QtWidgets.QMessageBox.Yes:
                 archivo = open("datos.txt", "w")
                 archivo.write(", ".join([str(i) for i in self.lista]))
                 archivo.close()
                 self.msj("Archivo guardado con éxito")
-
         except:
             archivo = open("datos.txt","w")
             archivo.write(", ".join([str(i) for i in self.lista]))
@@ -189,19 +179,26 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         #metodo para calcular valor menor, valor mayor, desviacion estandar, Media, Mediana, Moda y Varianza
         #nombré de lables = lbl_VMa, lbl_VMe, lbl_Media_2, lbl_Mediana_2, lbl_Moda_2, lbl_Varianza_2, lbl_DE
         t = len(self.lista)
-        mayor = round(self.lista[t-1],2) #if t>0 else round(self.lista[0],2)
+        if t == 0:
+            self.lbl_VMa.setText("0.0")
+            self.lbl_VMe.setText("0.0")
+            self.lbl_Media_2.setText("0.0")
+            self.lbl_Mediana_2.setText("0.0")
+            self.lbl_Moda_2.setText("0.0")
+            self.lbl_Varianza_2.setText("0.0")
+            self.lbl_DE.setText("0.0")
+            return
+        mayor = round(self.lista[t-1],2)
         menor = round(self.lista[0],2)
         suma = 0
         suma += sum(self.lista)
         media = round(suma/t,2)
-
         if t%2 == 0:
             mediana = self.lista[int(t/2)] + self.lista[int(t/2)-1]
             mediana = mediana/2
         else:
             mediana = self.lista[int(t/2)]
         mediana = round(mediana,2)
-
         moda = self.lista[0]
         veces = self.lista.count(moda)
         for i in self.lista:
@@ -213,8 +210,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         for i in self.lista:
             sumatoria += (i-media)**2
         if t == 1:
-            varianza = 0
-            desviacion = 0
+            varianza = 0.0
+            desviacion = 0.0
         else:
             varianza = sumatoria/(t-1) #DIVISION ENTRE 0 .-.
             desviacion = round(varianza**0.5,2)
@@ -225,37 +222,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.lbl_Media_2.setText(str(media))
         self.lbl_Mediana_2.setText(str(mediana))
         self.lbl_Moda_2.setText(str(moda))
-        # self.lbl_Varianza_2.setText(str(varianza))
+        self.lbl_Varianza_2.setText(str(varianza))
         self.lbl_DE.setText(str(desviacion))
-
-
-
-        # if len(self.lista) == 0:
-        #     self.msj("No hay valores en la lista")
-        #     return
-        # menor = self.lista[0]
-        # mayor = self.lista[len(self.lista)-1]
-        # suma = 0
-        # for i in self.lista:
-        #     suma += i
-        # media = suma/len(self.lista)
-        # if len(self.lista)%2 == 0:
-        #     mediana = (self.lista[int(len(self.lista)/2)] + self.lista[int(len(self.lista)/2)-1])/2
-        # else:
-        #     mediana = self.lista[int(len(self.lista)/2)]
-        # moda = self.lista[0]
-        # rep = 0
-        # for i in self.lista:
-        #     if self.lista.count(i)>rep:
-        #         moda = i
-        #         rep = self.lista.count(i)
-        # varianza = 0
-        # for i in self.lista:
-        #     varianza += (i-media)**2
-        # varianza = varianza/len(self.lista)
-        # desviacion = varianza**0.5
-
-        pass
 
     def addrefresh(self, valor):
         self.add_n(valor)
