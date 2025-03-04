@@ -1,10 +1,54 @@
 <RCC>
   <qresource prefix="Logos">
-    <file>FIT_logo_vertical.png</file>
-    <file>log_uat_nuevo.png</file>
+    <file>../Archivos/export202502092301563482.png</file>
+    <file>../Archivos/98315d8d-db37-4c25-a182-88804c5b07ab.jpg</file>
+    <file>../Archivos/Gatos.png</file>
+    <file>../Archivos/FIT_logo_vertical.png</file>
+    <file>../Archivos/log_uat_nuevo.png</file>
+    <file>2547138d-151e-4651-ae8e-9c4830f6d1d4.jpeg</file>
   </qresource>
-  <qresource prefix="Images">
-    <file>YO.jpg</file>
-    <file>Gatos.png</file>
+  <qresource prefix="Ejercicios">
+    <file>EquisG_1.png</file>
+    <file>Circulo.png</file>
+    <file>Equis.png</file>
+    <file>Base_Ahorcado.png</file>
+    <file>1.png</file>
+    <file>2.png</file>
+    <file>3.png</file>
+    <file>4.png</file>
+    <file>5.png</file>
+    <file>6.png</file>
+    <file>7.png</file>
+    <file>8.png</file>
+    <file>9.png</file>
+    <file>../Archivos/Via_1.jpeg</file>
+    <file>../Archivos/Via_2.jpeg</file>
+    <file>../Archivos/Via_3.jpeg</file>
+    <file>../Archivos/Animales_Granja_1.jpeg</file>
+    <file>../Archivos/Animales_Granja_2.jpeg</file>
+    <file>../Archivos/Animales_Granja_3.jpeg</file>
+    <file>../Archivos/Camino_1.jpeg</file>
+    <file>../Archivos/Camino_2.jpeg</file>
+    <file>../Archivos/Camino_3.jpeg</file>
+    <file>../Archivos/Cascada_1.jpeg</file>
+    <file>../Archivos/Cascada_2.jpeg</file>
+    <file>../Archivos/Cascada_3.jpeg</file>
+    <file>../Archivos/Rojo.png</file>
+    <file>../Archivos/Verde.png</file>
+    <file>../Archivos/Ambar_Amarillo.png</file>
+    <file>../Archivos/Apagago.png</file>
+    <file>../Archivos/export202502092342196874.png</file>
+    <file>../Archivos/export202502092342481393.png</file>
+    <file>../Archivos/export202502092342556504.png</file>
+    <file>../Archivos/export202502092116429107.png</file>
+    <file>../Archivos/export202502092135328918.png</file>
+    <file>../Archivos/export202502092201258300.png</file>
+    <file>../Archivos/export202502092210045727.png</file>
+    <file>../Archivos/export202502092217592371.png</file>
+    <file>../Archivos/export202502092224352078.png</file>
+    <file>../Archivos/export202502092235269890.png</file>
+    <file>../Archivos/export202502092244329519.png</file>
+    <file>2547138d-151e-4651-ae8e-9c4830f6d1d4.jpeg</file>
+    <file>../Archivos/Adobe Express - file (1).png</file>
   </qresource>
 </RCC>

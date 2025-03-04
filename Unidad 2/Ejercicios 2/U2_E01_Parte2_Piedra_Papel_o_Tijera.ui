@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1277</width>
+    <height>907</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #6D8FAF</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lbl_imagenUat">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>331</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/Archivos/log_uat_nuevo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenFi">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>10</y>
+      <width>211</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/Archivos/FIT_logo_vertical.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenGatos">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>660</y>
+      <width>311</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/Archivos/export202502092301563482.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Escoge">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>600</y>
+      <width>651</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;Forte&quot;;
+                   color: black;
+                   border-radius: 10px;
+                   font-weight: bold;
+                   font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>La Computadora Escogio:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_titulo">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>130</y>
+      <width>681</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Piedra, Papel, Tijeras contra la computadora</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Unidad2">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>100</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Unidad 2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Jugar">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>190</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Forte&quot;;
+background-color: rgb(130, 0, 2);
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;</string>
+    </property>
+    <property name="text">
+     <string>Jugar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Escoge_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>250</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;Forte&quot;;
+                   color: black;
+                   border-radius: 10px;
+                   font-weight: bold;
+                   font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Escoge uno:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Tijera">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>520</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Forte&quot;;
+background-color: rgb(130, 0, 2);
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;</string>
+    </property>
+    <property name="text">
+     <string>Tijera</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenPiedra">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>310</y>
+      <width>291</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Ejercicios/Archivos/export202502092342196874.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenPapel">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>310</y>
+      <width>291</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Ejercicios/Archivos/export202502092342481393.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenTijera">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>300</y>
+      <width>291</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Ejercicios/Archivos/export202502092342556504.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Papel">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>530</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Forte&quot;;
+background-color: rgb(130, 0, 2);
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;</string>
+    </property>
+    <property name="text">
+     <string>Papel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Piedra">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>530</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;Forte&quot;;
+background-color: rgb(130, 0, 2);
+color: rgb(255, 255, 255);
+border-radius:30px;
+border:6px solid #B0BEC5;</string>
+    </property>
+    <property name="text">
+     <string>Piedra</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Ingresa_Nombre">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;Forte&quot;;
+                   color: black;
+                   border-radius: 10px;
+                   font-weight: bold;
+                   font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Ingresa tu Nombre:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_Nombre">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>180</y>
+      <width>371</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Script MT Bold</family>
+      <pointsize>25</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255);
+font: 75 25pt &quot;Script MT Bold&quot;;
+color:rgb(0, 0, 0);
+border-radius:25px;
+border:8px solid #B0BEC5;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32774</number>
+    </property>
+    <property name="cursorPosition">
+     <number>0</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Escoge_2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>660</y>
+      <width>471</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;Forte&quot;;
+                   color: black;
+                   border-radius: 10px;
+                   font-weight: bold;
+                   font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Ganador:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenPapel_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>660</y>
+      <width>291</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Ejercicios/Archivos/export202502092342481393.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Escoge_3">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>750</y>
+      <width>471</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 20pt &quot;Forte&quot;;
+                   color: black;
+                   border-radius: 10px;
+                   font-weight: bold;
+                   font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Perdedor:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1277</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../../Archivos/Recursos.qrc"/>
+  <include location="../Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
