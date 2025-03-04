@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="Logos">
+    <file>FIT_logo_vertical.png</file>
+    <file>log_uat_nuevo.png</file>
+  </qresource>
+  <qresource prefix="Images">
+    <file alias="Gato.jpg">YO.jpg</file>
+    <file alias="Raton.png">Sin título.png</file>
+    <file>Gatos.png</file>
+  </qresource>
+</RCC>
