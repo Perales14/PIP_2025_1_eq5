@@ -53,7 +53,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.color.stop()
 
     def controlSegundoPlano(self):
-
         self.tiempo = 1
         self.color.start(450)
         self.control +=1
