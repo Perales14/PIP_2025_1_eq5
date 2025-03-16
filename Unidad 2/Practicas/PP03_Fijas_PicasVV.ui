@@ -316,7 +316,7 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;
  </widget>
  <resources>
   <include location="../../Archivos/Recursos.qrc"/>
-  <include location="../Recursos.qrc"/>
+  <include location="../../Archivos/Recursos.qrc"/>
  </resources>
  <connections/>
 </ui>

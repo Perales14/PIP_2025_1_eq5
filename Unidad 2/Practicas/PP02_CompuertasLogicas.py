@@ -16,8 +16,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.lineEdit_A.textChanged.connect(self.CheckLetter)
         self.lineEdit_B.textChanged.connect(self.CheckLetter)
 
-
-
     def compuerta(self):
         self.compuertaactiva = self.sender().text()
         self.lbl_CompuertaActiva.setText('Compuerta Activa: '+self.compuertaactiva)

@@ -2,12 +2,6 @@ import sys,random
 from PyQt5 import uic, QtWidgets,QtGui, QtCore
 qtCreatorFile = "PP03_Fijas_PicasVV.ui" # Nombre del archivo aqui
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
-#Comando para crear el Recursos_rc.1.py, desde "archivos" y lo cree en esta carpeta, no alla
-# pyrcc5 .\Recursos.qrc -o '..\Unidad 2\Recursos_rc.1.py'
-# como tal el codigo es
-#asi lo creara en la carpeta en la que se encuentre
-# pyrcc5 .\Recursos.qrc -o Recursos_rc.1.py
-
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
@@ -18,18 +12,11 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.lista = []
         self.btn_jugar.clicked.connect(self.fijas)
         self.txt_valor.textChanged.connect(self.CheckLetter);
-        # self.txt_Lista.setEnabled(False)
-
-    # def jugar(self):
-
-
     def fijas(self):
         numero = self.txt_valor.text()
-
         if len(numero) !=4:
             self.msj("Ingresa un Numero Valido")
             return
-
         self.lista.append(numero)
         cadena = ''
         for i in self.lista:
@@ -37,7 +24,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.txt_Lista.setText(cadena)
         fija,pica = 0,0
         for i in [0,1,2,3]:
-            # print('si pasa?')
             try:
                 if numero[i] in self.numero:
                     print('Si esta  el numero')
@@ -60,7 +46,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             float(valor)
             valor = "".join(valor.split())
             enviador.setText(valor)
-
         except:
             QtWidgets.QToolTip.showText(enviador.mapToGlobal(enviador.rect().bottomLeft()),
                                         "Solo se permiten números", None, QtCore.QRect(), 5000)
