@@ -540,6 +540,27 @@ font-style: italic;</string>
      <string>OUTPUT: </string>
     </property>
    </widget>
+   <widget class="QLabel" name="lbl_CompuertaActiva">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>320</y>
+      <width>431</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Compuerta Activa:</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -555,7 +576,7 @@ font-style: italic;</string>
  </widget>
  <resources>
   <include location="../../Archivos/Recursos.qrc"/>
-  <include location="../Recursos.qrc"/>
+  <include location="../../Archivos/Recursos.qrc"/>
  </resources>
  <connections/>
 </ui>

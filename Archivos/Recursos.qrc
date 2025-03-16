@@ -8,6 +8,9 @@
     <file>2547138d-151e-4651-ae8e-9c4830f6d1d4.jpeg</file>
   </qresource>
   <qresource prefix="Ejercicios">
+    <file>cilantro.png</file>
+    <file>mandarina.png</file>
+    <file>manzana.png</file>
     <file>EquisG_1.png</file>
     <file>Circulo.png</file>
     <file>Equis.png</file>

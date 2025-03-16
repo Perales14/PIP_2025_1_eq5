@@ -349,14 +349,13 @@ border:6px solid #B0BEC5;</string>
      <x>0</x>
      <y>0</y>
      <width>1161</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../../Archivos/Recursos.qrc"/>
   <include location="../../Archivos/Recursos.qrc"/>
  </resources>
  <connections/>
