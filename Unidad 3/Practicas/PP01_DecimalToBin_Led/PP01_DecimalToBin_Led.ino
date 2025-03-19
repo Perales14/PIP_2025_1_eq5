@@ -24,14 +24,7 @@ void loop() {
       numero = numero/2;
     }
     Serial.println(valor);
-    delay(4000);
-    for(int i = 0; i<8;i++){
-      // residuo = numero%2
-      digitalWrite(i+2,0);
-      // valor = " " + String(residuo) + valor;
-      // valor = valor + " " + String(residuo);
-      // numero = numero/2
-    }
   }
+  delay(1000);
 
 }
