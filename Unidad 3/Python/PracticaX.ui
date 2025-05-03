@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1199</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2979FF</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lbl_imagenUat">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>331</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/Archivos/log_uat_nuevo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenFi">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>0</y>
+      <width>211</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/Archivos/FIT_logo_vertical.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_titulo">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>70</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Forte</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Tic Tac Toe / Gato</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Unidad2">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>40</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Unidad 2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_imagenGatos">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>650</y>
+      <width>311</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Archivos/Recursos.qrc">:/Logos/Archivos/export202502092301563482.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Unidad2_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>250</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Puerto Com:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_accion">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+
+font-style: italic;
+
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>CONECTAR</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_com">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>260</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;
+
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>COM10</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txt_estado">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>370</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Estado</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txt_estado_2">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>280</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+font-style: italic;</string>
+    </property>
+    <property name="text">
+     <string>Datos</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lista_datos1">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>350</y>
+      <width>141</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_control">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>490</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+
+font-style: italic;
+
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>PRENDER</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lista_datos2">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>350</y>
+      <width>141</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lista_datos3">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>350</y>
+      <width>141</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>620</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+
+font-style: italic;
+
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>PRENDER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>620</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+
+font-style: italic;
+
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>PRENDER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_3">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>620</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-decoration: underline;
+font: 20pt &quot;Forte&quot;;
+color:rgb(0, 0, 0);
+border-radius: 10px;
+font-weight: bold;
+
+font-style: italic;
+
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>PRENDER</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1199</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../../Archivos/Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

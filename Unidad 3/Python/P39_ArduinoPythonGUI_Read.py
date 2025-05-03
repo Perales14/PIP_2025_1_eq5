@@ -3,7 +3,7 @@ from PyQt5 import uic, QtWidgets, QtCore
 
 import serial as tarjeta
 
-qtCreatorFile = "P38_ArduinoPythonGUI.ui" # Nombre del archivo aqui
+qtCreatorFile = "P40_ArduinoPythonGUI_Read.ui" # Nombre del archivo aqui
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -15,17 +15,23 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.btn_accion.clicked.connect(self.accion)
         self.segundoPlano = QtCore.QTimer()
         self.segundoPlano.timeout.connect(self.lecturas)
-        self.bandera = 1
+        self.bandera = 0
         self.datos = []
 
     def lecturas(self):
-        if self.arduino.isOpen():
-            cadena = self.arduino.readline().decode().strip()
-            if cadena and self.bandera == 0:
-                # print(cadena)
-                self.datos.append(cadena)
-                if self.bandera !=0:
-                    print(cadena)
+        try:
+            if self.arduino.isOpen():
+                if self.arduino.inWaiting():
+                    cadena = self.arduino.readline().decode().strip()
+                    if cadena !="":
+                        # print(cadena)
+                        self.datos.append(cadena)
+                        if self.bandera ==0:
+                            print(cadena)
+                            self.lista_datos.addItem(cadena)
+                            self.lista_datos.setCurrentRow(self.lista_datos.count()-1)
+        except Exception as e:
+            print(e)
 
     def accion(self):
         texto = self.btn_accion.text()
