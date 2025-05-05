@@ -17,7 +17,6 @@ void setup() {
   pinMode(led4, OUTPUT);
   pinMode(led5, OUTPUT);
   // prender de izquierda de derecha a izquierda, y de derecha a izquierda
-  
 }
 
 
