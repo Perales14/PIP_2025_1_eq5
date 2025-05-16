@@ -25,18 +25,19 @@ void loop() {
   Serial.print(",");
   Serial.println(ldr);
 
-  if (Serial.available()) {
-    char c = Serial.read();
-    if (c == '\n') {
+  while (Serial.available()) {
+    // char c = Serial.read();
+    String a = Serial.readString();
+    if (a.length() >0) {
+      inputString = a;
       procesarComando(inputString);
       inputString = "";
-    } else {
-      inputString += c;
-    }
+    } 
   }
 
   delay(1000);
 }
+
 
 float leerTMP() {
   int rawTMP = analogRead(pinTMP);
