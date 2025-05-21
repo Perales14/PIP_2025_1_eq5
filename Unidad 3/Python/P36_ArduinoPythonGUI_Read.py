@@ -3,7 +3,7 @@ from PyQt5 import uic, QtWidgets, QtCore
 
 import serial as tarjeta
 
-qtCreatorFile = "PracticaX.ui" # Nombre del archivo aqui
+qtCreatorFile = "P39_ArduinoPythonGUI_Read.ui" # Nombre del archivo aqui
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -18,30 +18,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.bandera = 0
         self.datos = []
 
-        self.btn_control.clicked.connect(self.control)
-        self.btn_1.clicked.connect(self.control)
-        self.btn_2.clicked.connect(self.control)
-        self.btn_3.clicked.connect(self.control)
-
-
-    def control(self):
-        obj = self.sender()
-        texto = obj.text()
-        led = obj.objectName()[-1]
-        if self.arduino is None:
-            print("No hay conexion")
-            return
-        if self.arduino.isOpen():
-            if texto == "PRENDER":
-                obj.setText("APAGAR")
-                c = led + "1"
-                print("c: ",c)
-                self.arduino.write(c.encode())
-            elif texto == "APAGAR":
-                obj.setText("PRENDER")
-                c = led + "0"
-                self.arduino.write(c.encode())
-
     def lecturas(self):
         try:
             if self.arduino.isOpen():
@@ -52,18 +28,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                         self.datos.append(cadena)
                         if self.bandera ==0:
                             print(cadena)
-                            cadena = cadena.split("-")
-                            # print('rompe')
-                            cadena = cadena[:-1]
-                            # cadena = str(cadena).split("-")
-                            cadena = [int(i) for i in cadena]
-                            # print(cadena)
-                            self.lista_datos1.addItem(str(cadena[0]))
-                            self.lista_datos1.setCurrentRow(self.lista_datos1.count()-1)
-                            self.lista_datos2.addItem(str(cadena[1]))
-                            self.lista_datos2.setCurrentRow(self.lista_datos2.count() - 1)
-                            self.lista_datos3.addItem(str(cadena[2]))
-                            self.lista_datos3.setCurrentRow(self.lista_datos3.count() - 1)
+                            self.lista_datos.addItem(cadena)
+                            self.lista_datos.setCurrentRow(self.lista_datos.count()-1)
         except Exception as e:
             print(e)
 

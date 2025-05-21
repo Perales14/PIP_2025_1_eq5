@@ -3,7 +3,7 @@ from PyQt5 import uic, QtWidgets, QtCore
 
 import serial as tarjeta
 
-qtCreatorFile = "PracticaX.ui" # Nombre del archivo aqui
+qtCreatorFile = "P42_ArduinoPythonGUI_ReadWrite_VariosSensores.ui" # Nombre del archivo aqui
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -19,28 +19,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.datos = []
 
         self.btn_control.clicked.connect(self.control)
-        self.btn_1.clicked.connect(self.control)
-        self.btn_2.clicked.connect(self.control)
-        self.btn_3.clicked.connect(self.control)
-
 
     def control(self):
-        obj = self.sender()
-        texto = obj.text()
-        led = obj.objectName()[-1]
+        texto = self.btn_control.text()
         if self.arduino is None:
             print("No hay conexion")
             return
         if self.arduino.isOpen():
             if texto == "PRENDER":
-                obj.setText("APAGAR")
-                c = led + "1"
-                print("c: ",c)
-                self.arduino.write(c.encode())
+                self.btn_control.setText("APAGAR")
+                self.arduino.write("1".encode())
             elif texto == "APAGAR":
-                obj.setText("PRENDER")
-                c = led + "0"
-                self.arduino.write(c.encode())
+                self.btn_control.setText("PRENDER")
+                self.arduino.write("0".encode())
 
     def lecturas(self):
         try:
@@ -57,7 +48,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
                             cadena = cadena[:-1]
                             # cadena = str(cadena).split("-")
                             cadena = [int(i) for i in cadena]
-                            # print(cadena)
+                            print(cadena)
                             self.lista_datos1.addItem(str(cadena[0]))
                             self.lista_datos1.setCurrentRow(self.lista_datos1.count()-1)
                             self.lista_datos2.addItem(str(cadena[1]))
@@ -93,8 +84,4 @@ if __name__ == "__main__":
     window = MyApp()
     window.show()
     sys.exit(app.exec_())
-
-#hacer los otros de los ejercicios,
-# hacer comentarios en los ejercicios
-# poner la conclusion de lo aprendido, sobre comportamientos y eso.
-# cual consideramos que es la mejor para X o Y cosa
+w

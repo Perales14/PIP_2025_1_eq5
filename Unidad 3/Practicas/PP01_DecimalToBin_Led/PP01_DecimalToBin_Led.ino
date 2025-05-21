@@ -16,9 +16,9 @@ void loop() {
   if (Serial.available()>0){  
     
     numero = Serial.readString().toInt();
-    for(int i = 0; i<8;i++){
+    for(int i = 0; i<6;i++){
       residuo = numero%2;
-      digitalWrite(i+2,residuo);
+      digitalWrite(i+8,residuo);
       valor = " " + String(residuo) + valor;
       // valor = valor + " " + String(residuo);
       numero = numero/2;

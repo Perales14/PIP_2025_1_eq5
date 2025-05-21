@@ -1,4 +1,5 @@
 byte numero;
+#include <WiFi.h>
 bool residuo;
 String valor;
 String palabra;
@@ -15,22 +16,22 @@ void mostrarbinario(int n){
   // int numero = n.toInt();
   
   numero = n;
-  for(int i = 0; i<8;i++){
+  for(int i = 0; i<5;i++){
     residuo = numero%2;
-    digitalWrite(i+2,residuo);
+    digitalWrite(i+8,residuo);
     numero = numero/2;
   }
 
 }
 void apagar(){
-  digitalWrite(2,0);
-  digitalWrite(3,0);
-  digitalWrite(4,0);
-  digitalWrite(5,0);
-  digitalWrite(6,0);
-  digitalWrite(7,0);
   digitalWrite(8,0);
   digitalWrite(9,0);
+  digitalWrite(10,0);
+  digitalWrite(11,0);
+  digitalWrite(12,0);
+  digitalWrite(13,0);
+  // digitalWrite(8,0);
+  // digitalWrite(9,0);
   
 }
 void loop() {
