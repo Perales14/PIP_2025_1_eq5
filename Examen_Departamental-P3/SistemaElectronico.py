@@ -39,6 +39,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         motor_valor = 1 if self.motor_habilitado else 0
 
         mensaje = f"L:{foco_valor},T:{motor_valor}\n"
+        print("mensaje", mensaje)
         self.arduino.write(mensaje.encode())
 
         # leer del arduino

@@ -3,7 +3,7 @@ from PyQt5 import uic, QtWidgets, QtCore
 
 import serial as tarjeta
 
-qtCreatorFile = "PracticaX.ui" # Nombre del archivo aqui
+qtCreatorFile = "Practica3.ui" # Nombre del archivo aqui
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
 class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -86,15 +86,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
             self.btn_accion.setText("DESCONECTAR")
             self.txt_estado.setText("RECONECTADO")
 
-
-#Area de los Slots
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MyApp()
     window.show()
     sys.exit(app.exec_())
-
-#hacer los otros de los ejercicios,
-# hacer comentarios en los ejercicios
-# poner la conclusion de lo aprendido, sobre comportamientos y eso.
-# cual consideramos que es la mejor para X o Y cosa
